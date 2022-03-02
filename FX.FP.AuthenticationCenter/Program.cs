@@ -29,10 +29,10 @@ builder.Services.AddDbContext<AuthDbContext>(
 builder.Services.Configure<TokenOptions>(builder.Configuration.GetSection("TokenOptions"));
 
 //注册对称可逆加密服务
-//builder.Services.AddTransient<IAuthService, HSA_AuthService>();
+builder.Services.AddTransient<IAuthService, HSA_AuthService>();
 
-//注册非对称不可逆加密服务
-builder.Services.AddTransient<IAuthService, RSA_AuthService>();
+////注册非对称不可逆加密服务
+//builder.Services.AddTransient<IAuthService, RSA_AuthService>();
 
 var app = builder.Build();
 

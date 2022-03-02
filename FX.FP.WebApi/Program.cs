@@ -16,11 +16,11 @@ builder.Services.AddSwaggerGen();
 TokenOptions tokenOptions = new TokenOptions();
 builder.Configuration.Bind("TokenOptions", tokenOptions);
 
-////JWT校验(HSA)
-//builder.Services.AddHSAAuthBuilder(tokenOptions);
+//JWT校验(HSA)
+builder.Services.AddHSAAuthBuilder(tokenOptions);
 
-//JWT校验(RSA)
-builder.Services.AddRSAAuthBuilder(tokenOptions);
+////JWT校验(RSA)
+//builder.Services.AddRSAAuthBuilder(tokenOptions);
 
 
 var app = builder.Build();

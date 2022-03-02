@@ -29,7 +29,8 @@ namespace FX.FP.AuthenticationCenter.Business
                new Claim(ClaimTypes.Name, info.AppID),
                new Claim(ClaimTypes.Role,"Customer"),//传递其他信息  
                new Claim("Area",info.Area), //传递其他信息  
-               new Claim("AllowIps",info.AllowIps)
+               new Claim("AllowIps",info.AllowIps),
+               new Claim("DateTime",DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
             };
 
             //需要加密：需要加密key:

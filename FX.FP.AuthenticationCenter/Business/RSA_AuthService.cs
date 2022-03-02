@@ -32,7 +32,9 @@ namespace FX.FP.AuthenticationCenter.Business
             {
                 new Claim(ClaimTypes.Name, info.AppID),
                 new Claim(ClaimTypes.Role,"Customer"),
-                new Claim("Area",info.Area)
+                new Claim("Area",info.Area),
+                new Claim("AllowIps",info.AllowIps),
+                new Claim("DateTime",DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
             };
 
             SigningCredentials credentials = new SigningCredentials(new RsaSecurityKey(keyParams), SecurityAlgorithms.RsaSha256Signature);
