@@ -7,6 +7,9 @@ using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
+    /// <summary>
+    /// JWT加密方式 创建者扩展
+    /// </summary>
     public static class AuthenticationExt
     {
         /// <summary>
